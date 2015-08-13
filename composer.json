@@ -1,0 +1,19 @@
+{
+  "name": "deg/subcategory_view",
+  "type": "magento-module",
+  "description": "Subcategory Listing Display Mode Enhancement",
+  "require": {
+    "magento-hackathon/magento-composer-installer":"*"
+  },
+  "extra":{
+    "map":[
+      ["app/code/local/DEG/SubcategoryView", "app/code/local/DEG/SubcategoryView"],
+      ["app/design/frontend/base/default/layout/subcategory_view.xml", "app/design/frontend/base/default/layout/subcategory_view.xml"],
+      ["app/design/frontend/base/default/template/catalog/category/subcategory.phtml", "app/design/frontend/base/default/template/catalog/category/subcategory.phtml"],
+      ["app/design/frontend/base/default/template/catalog/category/view.phtml", "app/design/frontend/base/default/template/catalog/category/view.phtml"],
+      ["app/design/frontend/enterprise/default/template/catalog/category/view.phtml", "app/design/frontend/enterprise/default/template/catalog/category/view.phtml"],
+      ["app/etc/modules/DEG_SubcategoryView.xml", "app/etc/modules/DEG_SubcategoryView.xml"],
+      ["adminCatalogCategorySave.patch", "adminCatalogCategorySave.patch"]
+    ]
+  }
+}
