@@ -13,7 +13,7 @@
       ["app/design/frontend/base/default/template/catalog/category/view.phtml", "app/design/frontend/base/default/template/catalog/category/view.phtml"],
       ["app/design/frontend/enterprise/default/template/catalog/category/view.phtml", "app/design/frontend/enterprise/default/template/catalog/category/view.phtml"],
       ["app/etc/modules/DEG_SubcategoryView.xml", "app/etc/modules/DEG_SubcategoryView.xml"],
-      ["adminCatalogCategorySave.patch", "adminCatalogCategorySave.patch"]
+      ["patch/adminCatalogCategorySave.patch", "patch/adminCatalogCategorySave.patch"]
     ]
   }
 }
