@@ -1,0 +1,25 @@
+<?php
+/**
+ * @var $_category Mage_Catalog_Model_Category
+ * @var $this DEG_SubcategoryView_Block_Subcategory
+ */
+?>
+<div class="category-list">
+    <ul class="subcategories-grid">
+        <?php foreach($this->getCurrentSubcategories() as $_category ): ?>
+        <li>
+            <a class="subcategory-image" href="<?php echo $_category->getUrl();?>">
+                <?php if($_category->getThumbnail()):?>
+                    <img src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$_category->getThumbnail() ?>" width="200" height="200" />
+                <?php endif; ?>
+                <span class="title">
+                    <?php echo $this->escapeHtml($_category->getName()) ?>
+                    <?php if($_productCount = $this->getVisibleProductCount($_category)):?>
+                        <span class="count">(<?php echo $_productCount; ?>) </span>
+                    <?php endif;?>
+                </span>
+            </a>
+            <?php endforeach; ?>
+    </ul>
+    <script type="text/javascript">decorateGeneric($$('ul.subcategories-grid'), ['odd','even','first','last'])</script>
+</div>

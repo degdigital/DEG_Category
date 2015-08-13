@@ -1,0 +1,22 @@
+Index: app/code/core/Mage/Adminhtml/controllers/Catalog/CategoryController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/code/core/Mage/Adminhtml/controllers/Catalog/CategoryController.php	(revision )
++++ app/code/core/Mage/Adminhtml/controllers/Catalog/CategoryController.php	(revision )
+@@ -307,7 +307,13 @@
+             if (isset($data['category_products']) &&
+                 !$category->getProductsReadonly()) {
+                 $products = array();
+-                parse_str($data['category_products'], $products);
++                $cat_products_split = explode('&', $data['category_products']);
++                foreach ($cat_products_split as $row) {
++                    $arr = explode('=', $row);
++                    if (count($arr) == 2) {
++                        $products[$arr[0]] = $arr[1];
++                    }
++                }
+                 $category->setPostedProducts($products);
+             }
+ 
