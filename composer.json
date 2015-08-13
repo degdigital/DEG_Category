@@ -12,8 +12,7 @@
       ["app/design/frontend/base/default/template/catalog/category/subcategory.phtml", "app/design/frontend/base/default/template/catalog/category/subcategory.phtml"],
       ["app/design/frontend/base/default/template/catalog/category/view.phtml", "app/design/frontend/base/default/template/catalog/category/view.phtml"],
       ["app/design/frontend/enterprise/default/template/catalog/category/view.phtml", "app/design/frontend/enterprise/default/template/catalog/category/view.phtml"],
-      ["app/etc/modules/DEG_SubcategoryView.xml", "app/etc/modules/DEG_SubcategoryView.xml"],
-      ["patch/adminCatalogCategorySave.patch", "patch/adminCatalogCategorySave.patch"]
+      ["app/etc/modules/DEG_SubcategoryView.xml", "app/etc/modules/DEG_SubcategoryView.xml"]
     ]
   }
 }
