@@ -66,11 +66,12 @@ class DEG_SubcategoryView_Block_Subcategory extends Mage_Core_Block_Template
     /**
      * Gets the product URL without the hierarchical category information.
      *
-     * @param $product
+     * @param Mage_Catalog_Model_Product $product
      * @return mixed
      */
-    public function getProductUrlWithoutCategory($product){
-        return Mage::getResourceSingleton('catalog/product')->getAttributeRawValue($product->getId(), 'url_key', Mage::app()->getStore());
+    public function getProductUrlWithoutCategory($product)
+    {
+        return $product->getUrlModel()->getUrl($product, array('_ignore_category' => true));
     }
 
 }
